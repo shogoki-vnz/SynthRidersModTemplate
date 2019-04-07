@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1664399354, guid: 0ef81d1e4ce380c4190dea5f2259c906, type: 3}
+  m_Name: ExportSettings
+  m_EditorClassIdentifier: 
+  activeProfile: 0
+  exportProfiles:
+  - referencePaths: []
+    modName: SimpleEventTester
+    modAuthor: shogoki_vnz
+    modVersion: 1.0.0
+    modDescription: Simple mod to test comunication between game and mods
+    modAssetPath: Assets/SimpleEventTester
+    modExportPath: Build
+  logLevel: 3
+  optimizeMode: 0
+  compileScritps: 1
+  compileScriptsInModFolderOnly: 1
+  clearConsoleOnBuild: 1
+  showOutputDirectory: 1
+  generateManifest: 0
+  commandLineToken: +mod=%PATH%
+  commandLineExecutable: 
