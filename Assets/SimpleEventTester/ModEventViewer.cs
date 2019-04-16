@@ -13,8 +13,38 @@ public class ModEventViewer : MonoBehaviour {
 
 	private Transform followerTransform;
 
-	// Use this for initialization
-	void Awake () {
+	private Action<int, int, int> playCallback;
+	private Action gameOverCallback;
+	public static bool CanLoadSongs { get; set; }
+
+    public static Action<int, int, int> PlayCallback
+    {
+        get
+        {
+            return s_instance.playCallback;
+        }
+
+        set
+        {
+            s_instance.playCallback = value;
+        }
+    }
+
+    public static Action GameOverCallback
+    {
+        get
+        {
+            return s_instance.gameOverCallback;
+        }
+
+        set
+        {
+            s_instance.gameOverCallback = value;
+        }
+    }
+
+    // Use this for initialization
+    void Awake () {
 		if(s_instance != null) {
 			Destroy(this);
 		}
@@ -29,6 +59,20 @@ public class ModEventViewer : MonoBehaviour {
 		logSB = new StringBuilder();
 		m_loggerField.text = string.Empty;
 		m_loggerWrap.gameObject.SetActive(false);			
+	}
+
+	void LateUpdate() {
+		if(PlayCallback != null) { 
+			if(Input.GetKeyDown(KeyCode.R)) {
+				PlayCallback(UnityEngine.Random.Range(0, 16), UnityEngine.Random.Range(0, 6), UnityEngine.Random.Range(0, 4));
+			}
+		}
+
+		if(GameOverCallback != null) {
+			if(Input.GetKeyDown(KeyCode.X)) {
+				GameOverCallback();
+			}
+		}
 	}
 
 	void FixedUpdate() {

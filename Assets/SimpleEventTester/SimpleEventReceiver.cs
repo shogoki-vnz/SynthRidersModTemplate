@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UMod;
-using Synth.mods;
+using Synth.mods.utils;
+using Synth.mods.events;
+using Synth.mods.info;
+using System.Collections.Generic;
+using Synth.mods.interactions;
+using System;
 
-public class SimpleEventReceiver : ModScript, ISynthRidersEvents {
+public class SimpleEventReceiver : ModScript, ISynthRidersEvents, ISynthRidersInfo, ISynthRidersInteractions {
 
 	public override void OnModLoaded()
 	{
@@ -22,13 +27,14 @@ public class SimpleEventReceiver : ModScript, ISynthRidersEvents {
     public void OnRoomLoaded()
     {
         ModEventViewer.AnchorLogViewer();
+        ModEventViewer.PrintToLog("Key R play a random song OST");
         ModEventViewer.PrintToLog("You are in the room.");
     }
 
     /// <summary>
     /// Called when the Room Scene is unloaded
     /// </summary>
-    public void OnRoomUnLoaded()
+    public void OnRoomUnloaded()
     {
         ModEventViewer.PrintToLog("Room Unloaded");
     }
@@ -40,6 +46,7 @@ public class SimpleEventReceiver : ModScript, ISynthRidersEvents {
     public void OnGameStageLoaded(TrackData trackData)
     {
         ModEventViewer.AnchorLogViewer();
+        ModEventViewer.PrintToLog("Key X to do GameOver");
         ModEventViewer.PrintToLog("is a custom song "+trackData.isCustomSong);
         ModEventViewer.PrintToLog("Song "+trackData.name+" by "+trackData.artist);
         ModEventViewer.PrintToLog("You are in the Game Stage");
@@ -48,9 +55,10 @@ public class SimpleEventReceiver : ModScript, ISynthRidersEvents {
     /// <summary>
     /// Called when the song stage is unloaded
     /// </summary>
-    public void OnGameStageUnLoaded()
+    public void OnGameStageUnloaded()
     {
         ModEventViewer.PrintToLog("Game Stage Unloaded");
+        ModEventViewer.GameOverCallback = null;
     }	
 
     /// <summary>
@@ -95,7 +103,7 @@ public class SimpleEventReceiver : ModScript, ISynthRidersEvents {
     {
         ModEventViewer.PrintToLog("Total points scored "+songFinishedData.points);
         ModEventViewer.PrintToLog("was perfect "+songFinishedData.wasPerfect);
-        ModEventViewer.PrintToLog("Finished "+songFinishedData.songData.name);
+        ModEventViewer.PrintToLog("Finished "+songFinishedData.trackData.name);
     }
 
     /// <summary>
@@ -105,5 +113,40 @@ public class SimpleEventReceiver : ModScript, ISynthRidersEvents {
     public void OnSongFailed(TrackData trackData)
     {
         ModEventViewer.PrintToLog("The song "+trackData.name+" was failed");
+    }
+
+    public void SetLoadedTracks(List<TrackData> tracks)
+    {
+        ModEventViewer.PrintToLog("There is a total of "+tracks.Count+" tracks installed");
+        ModEventViewer.PrintToLog("Finding Songs...");
+    }
+
+    public void SetLoadedStages(List<StageData> stages)
+    {
+        ModEventViewer.PrintToLog("There is a total of "+stages.Count+" stages avalaible");
+    }
+
+    public void SetUserSelectedColors(Color leftHandColor, Color rightHandColor, Color oneHandSpecialColor, Color bothHandSpecialColor)
+    {
+        ModEventViewer.PrintToLog("both hand "+bothHandSpecialColor.ToString());
+        ModEventViewer.PrintToLog("one hand "+oneHandSpecialColor.ToString());
+        ModEventViewer.PrintToLog("right "+rightHandColor.ToString());
+        ModEventViewer.PrintToLog("left "+leftHandColor.ToString());
+        ModEventViewer.PrintToLog("Colors are:");
+    }
+
+    public void SetUICanvasCallback(Action<GameObject> callback)
+    {
+        // throw new NotImplementedException();
+    }
+
+    public void SetGameOverCallback(Action callback)
+    {
+        ModEventViewer.GameOverCallback = callback;
+    }
+
+    public void SetPlayTrackCallback(Action<int, int, int> callback)
+    {
+        ModEventViewer.PlayCallback = callback;
     }
 }
