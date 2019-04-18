@@ -13,30 +13,30 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - FIRSTPERSON_ONLY_LAYER
+  - THIRDPERSON_ONLY_LAYER
+  - Stage
+  - ScoreUI
+  - MainDisplay
+  - MidAir
+  - PlayerBoundary
+  - SleeveBox
+  - Sleeve
+  - Vinyl
+  - Cartridge
+  - PlayerAvatar
+  - PostProcessing
+  - Notes
+  - RoomCache
+  - city exterior
+  - Controller Indicator
+  - Menu
+  - ScoreUI MS
+  - Glow
+  - RoomMenu
+  - WallObstacles
+  - JoinHands
   m_SortingLayers:
   - name: Default
     uniqueID: 0
