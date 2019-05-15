@@ -149,4 +149,24 @@ public class SimpleEventReceiver : ModScript, ISynthRidersEvents, ISynthRidersIn
     {
         ModEventViewer.PlayCallback = callback;
     }
+
+    public void SetCurrentSongSelected(int CurrentSong)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetRefreshCallback(Action callback)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetSelectedTrackCallback(Action<int> callback)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetFilterTrackCallback(Action<List<string>> callback)
+    {
+        throw new NotImplementedException();
+    }
 }

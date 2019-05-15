@@ -5,6 +5,7 @@ using Synth.mods.events;
 using Synth.mods.utils;
 using Synth.mods.interactions;
 using System;
+using System.Collections.Generic;
 
 public class ComingSoonEventReceiver : ModScript, ISynthRidersEvents, ISynthRidersInteractions {
 
@@ -94,6 +95,21 @@ public class ComingSoonEventReceiver : ModScript, ISynthRidersEvents, ISynthRide
     }
 
     public void SetPlayTrackCallback(Action<int, int, int> callback)
+    {
+        //throw new NotImplementedException();
+    }
+
+    public void SetRefreshCallback(Action callback)
+    {
+        //throw new NotImplementedException();
+    }
+
+    public void SetSelectedTrackCallback(Action<int> callback)
+    {
+        //throw new NotImplementedException();
+    }
+
+    public void SetFilterTrackCallback(Action<List<string>> callback)
     {
         //throw new NotImplementedException();
     }

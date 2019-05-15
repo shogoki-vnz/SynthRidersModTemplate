@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: -1664399354, guid: 0ef81d1e4ce380c4190dea5f2259c906, type: 3}
   m_Name: ExportSettings
   m_EditorClassIdentifier: 
-  activeProfile: 0
+  activeProfile: 5
   exportProfiles:
   - referencePaths: []
     modName: SimpleEventTester
@@ -34,6 +34,27 @@ MonoBehaviour:
     modDescription: In your nearest theaters
     modAssetPath: Assets/ComingSoon
     modExportPath: Build
+  - referencePaths: []
+    modName: Queue and Playlists
+    modAuthor: Xypher Orion
+    modVersion: 1.0.0
+    modDescription: Add playlist and a Queue
+    modAssetPath: Assets/Queue and Playlists
+    modExportPath: Build
+  - referencePaths: []
+    modName: UIPlayground
+    modAuthor: '@shogoki_vnz'
+    modVersion: 1.0.0
+    modDescription: Just a demo for the UI/Laser Pointer interactions
+    modAssetPath: Assets/UIPlayground
+    modExportPath: Build
+  - referencePaths: []
+    modName: RandomSong
+    modAuthor: DefaultCompany
+    modVersion: 1.0.0
+    modDescription: 
+    modAssetPath: C:\Users\jhean\Documents\Development\Unity\SynthRidersModTemplate\Assets\RandomSong
+    modExportPath: Build
   logLevel: 3
   optimizeMode: 0
   compileScritps: 1
@@ -42,4 +63,4 @@ MonoBehaviour:
   showOutputDirectory: 1
   generateManifest: 0
   commandLineToken: +mod=%PATH%
-  commandLineExecutable: 
+  commandLineExecutable: C:/Program Files (x86)/Steam/steamapps/common/SynthRiders
