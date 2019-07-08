@@ -3,57 +3,44 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1664399354, guid: 0ef81d1e4ce380c4190dea5f2259c906, type: 3}
   m_Name: ExportSettings
   m_EditorClassIdentifier: 
-  activeProfile: 5
+  activeProfile: 3
   exportProfiles:
   - referencePaths: []
     modName: SimpleEventTester
-    modAuthor: shogoki_vnz
+    modAuthor: '@shogoki_vnz'
     modVersion: 1.0.1
     modDescription: Simple mod to test comunication between game and mods
-    modAssetPath: Assets/SimpleEventTester
+    modAssetPath: ./Assets/SimpleEventTester
     modExportPath: Build
   - referencePaths: []
     modName: SynthEssentials
-    modAuthor: shogoki_vnz
+    modAuthor: '@shogoki_vnz'
     modVersion: 1.0.1
     modDescription: You can't leave home without them
-    modAssetPath: Assets/SynthEssentials
+    modAssetPath: ./Assets/SynthEssentials
     modExportPath: Build
   - referencePaths: []
     modName: ComingSoon
-    modAuthor: shogoki_vnz
+    modAuthor: '@shogoki_vnz'
     modVersion: 1.0.1
     modDescription: In your nearest theaters
-    modAssetPath: Assets/ComingSoon
-    modExportPath: Build
-  - referencePaths: []
-    modName: Queue and Playlists
-    modAuthor: Xypher Orion
-    modVersion: 1.0.0
-    modDescription: Add playlist and a Queue
-    modAssetPath: Assets/Queue and Playlists
+    modAssetPath: ./Assets/ComingSoon
     modExportPath: Build
   - referencePaths: []
     modName: UIPlayground
     modAuthor: '@shogoki_vnz'
     modVersion: 1.0.0
     modDescription: Just a demo for the UI/Laser Pointer interactions
-    modAssetPath: Assets/UIPlayground
-    modExportPath: Build
-  - referencePaths: []
-    modName: RandomSong
-    modAuthor: DefaultCompany
-    modVersion: 1.0.0
-    modDescription: 
-    modAssetPath: C:\Users\jhean\Documents\Development\Unity\SynthRidersModTemplate\Assets\RandomSong
+    modAssetPath: ./Assets/UIPlayground
     modExportPath: Build
   logLevel: 3
   optimizeMode: 0

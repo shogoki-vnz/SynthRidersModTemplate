@@ -113,4 +113,12 @@ public class ComingSoonEventReceiver : ModScript, ISynthRidersEvents, ISynthRide
     {
         //throw new NotImplementedException();
     }
+
+    public void SetRefreshCallback(Action<Action, bool> callback) {
+        //throw new NotImplementedException();
+    }
+
+    public void SetFilterTrackCallback(Action<List<string>, Action, bool> callback) {
+        //throw new NotImplementedException();
+    }
 }

@@ -88,17 +88,25 @@ namespace UIPlayground.test {
 
         public void SetRefreshCallback(Action callback)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void SetSelectedTrackCallback(Action<int> callback)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void SetFilterTrackCallback(Action<List<string>> callback)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+        public void SetRefreshCallback(Action<Action, bool> callback) {
+            //throw new NotImplementedException();
+        }
+
+        public void SetFilterTrackCallback(Action<List<string>, Action, bool> callback) {
+            //throw new NotImplementedException();
         }
     }
 }
